@@ -1,6 +1,7 @@
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 import pagination from "./pagination.js";
 import productModal from "./productModal.js";
+import deleteModal from "./deleteModal.js";
 
 // const { createApp } = Vue;
 // let prductTitle = document.querySelector("#prduct-title").innerHTML;
@@ -127,11 +128,12 @@ const app = createApp({
     axios.defaults.headers.common.Authorization = token;
 
     this.checkAdmin();
-    console.log(this.$refs)
+    console.log(this.$refs);
   },
   components: {
     pagination,
     productModal,
+    deleteModal,
   },
 });
 
